@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-<% elif $1 %>
-  $2
+</%>
 ]]></content>
-  <tabTrigger>elif</tabTrigger>
+  <tabTrigger>/</tabTrigger>
+  <description>% close tag</description>
   <scope>text.quip-template</scope>
 </snippet>

@@ -1,12 +1,8 @@
 <snippet>
   <content><![CDATA[
-<% if $1 %>
-  $2
 <% else %>
-  $3
-</%>$0
+  $1
 ]]></content>
-  <tabTrigger>ife</tabTrigger>
-  <description>if else</description>
+  <tabTrigger>else</tabTrigger>
   <scope>text.quip-template</scope>
 </snippet>
