@@ -3,7 +3,7 @@
 name: Quip Template
 file_extensions: [html, htm]
 first_line_match: "<%"
-scope: text.tornado
+scope: text.quip-template
 contexts:
   main:
     - match: ""
