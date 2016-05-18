@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Tornado
+name: Quip Template
 file_extensions: [html, htm]
 first_line_match: "<%"
 scope: text.tornado
