@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+safe_html(_("$1"))
+]]></content>
+  <tabTrigger>_html</tabTrigger>
+  <scope>text.quip-template</scope>
+  <description>safe_html(_(...))</description>
+</snippet>
