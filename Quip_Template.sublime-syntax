@@ -17,15 +17,16 @@ contexts:
           push: close_block
         - match: "/%>"
           scope: invalid.illegal.stray-bracket-end
+        - match: "}}|%>"
+          scope: keyword.control.python
 
   expression:
     - meta_scope: keyword.control.python
     - match: ""
       set: "Packages/Python/Python.sublime-syntax"
       with_prototype:
-      - match: "}}"
-        scope: keyword.control.python
-        pop: true
+        - match: "(?=}}[^}])"
+          pop: true
 
   command:
     - meta_scope: keyword.control.python
@@ -36,9 +37,8 @@ contexts:
     - match: ""
       set: "Packages/Python/Python.sublime-syntax"
       with_prototype:
-      - match: "%>"
-        scope: keyword.control.python
-        pop: true
+        - match: "(?=%>)"
+          pop: true
 
   close_block:
     - meta_scope: keyword.control.python

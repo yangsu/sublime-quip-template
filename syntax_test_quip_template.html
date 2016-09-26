@@ -1,0 +1,35 @@
+// SYNTAX TEST "Packages/sublime-quip-template/Quip_Template.sublime-syntax"
+<% import test %>
+// <- keyword.control.python
+// ^^^^^^ text.quip-template text.html.basic source.python meta.statement.import.python keyword.control.import.python
+//             ^ text.quip-template text.html.basic keyword.control.python
+<html>
+// <- text.quip-template text.html.basic meta.tag.structure.any.html punctuation.definition.tag.begin.html
+// ^ text.quip-template text.html.basic meta.tag.structure.any.html entity.name.tag.structure.any.html
+//   ^ text.quip-template text.html.basic meta.tag.structure.any.html punctuation.definition.tag.end.html
+<% set a = 1 %>
+// <- keyword.control.python
+// ^^^ text.quip-template text.html.basic source.python support.type.python
+//           ^ text.quip-template text.html.basic keyword.control.python
+  <b class={{a}}>
+  // <- text.quip-template text.html.basic meta.tag.inline.any.html punctuation.definition.tag.begin.html
+  //       ^^ text.quip-template text.html.basic meta.tag.inline.any.html keyword.control.python
+  //         ^ text.quip-template text.html.basic meta.tag.inline.any.html source.python
+  //          ^^ text.quip-template text.html.basic meta.tag.inline.any.html keyword.control.python
+  // ^^^^^ text.quip-template text.html.basic meta.tag.inline.any.html meta.attribute-with-value.class.html entity.other.attribute-name.class.html
+  </b>
+  <a class={{{"a": 1}}}>
+  // <- text.quip-template text.html.basic meta.tag.inline.a.html punctuation.definition.tag.begin.html
+  // ^^^^^ text.quip-template text.html.basic meta.tag.inline.a.html meta.attribute-with-value.class.html entity.other.attribute-name.class.html
+  //       ^^ text.quip-template text.html.basic meta.tag.inline.a.html keyword.control.python
+  //         ^ text.quip-template text.html.basic meta.tag.inline.a.html source.python meta.structure.dictionary-or-set.python punctuation.section.dictionary-or-set.begin.python
+  //                 ^^ text.quip-template text.html.basic meta.tag.inline.a.html keyword.control.python
+  </a>
+  <% for i in ["1", "2"] %>
+  // <- text.quip-template text.html.basic keyword.control.python
+  //                     ^^ text.quip-template text.html.basic keyword.control.python
+  </%>
+  // <- text.quip-template text.html.basic keyword.control.python
+  /%>
+  // <- text.quip-template text.html.basic invalid.illegal.stray-bracket-end
+</html>
